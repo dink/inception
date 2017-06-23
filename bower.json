@@ -1,0 +1,19 @@
+{
+  "name": "inception",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dinkco/inception",
+  "authors": [
+    "Dinkco <info@dryink.co>"
+  ],
+  "description": "Boilerplate for front-end projects",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "*",
+    "susy": "^2.2.12",
+    "tether": "^1.4.0",
+    "reset-css": "^2.2.0"
+  }
+}

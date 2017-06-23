@@ -1,0 +1,6 @@
+/.idea
+CSSreport.md
+.env
+/node_modules
+/bower_components
+/build

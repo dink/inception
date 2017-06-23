@@ -1,0 +1,79 @@
+// Susy Settings
+$susy: (
+  columns: 12,
+  gutter: 1/4,
+  container: 860px,
+  math: fluid,
+  output: float,
+  global-box-sizing: border-box,
+  clearfix: true,
+  gutter-position: inside,
+  //   debug: (
+  //   image: show,
+  //   color: rgba(#ff0, .25),
+  //   output: background,
+  //   toggle: top right,
+  // )
+);
+
+// Paths
+$fonts: '../fonts';
+
+
+$brand-color: #0a3744;
+$tone-color: lighten($brand-color, 80%);
+$bg-color: #eee;
+
+
+$text-color: lighten(black, 25);
+$text-color-light: lighten($text-color, 50);
+$text-color-dark: darken($text-color, 15);
+
+// Units
+$base-unit: rem;
+$base-font-size: 16px;
+$base-line-height: 22px;
+$line-height-method: rhythm;
+
+// Fonts
+$sans: 'Work Sans', Helvetica, Arial, sans-serif !default;
+$serif: 'noto', Georgia, 'Times New Roman', serif !default;
+$mono: 'Lucida Console', Monaco, monospace !default;
+
+// Font weigths
+$light: 300;
+$regular: 400;
+$bold: 600;
+
+// Mixins
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin font-size($size, $base: 16) {
+  font-size: ($size)+ px; // fallback for old browsers
+  font-size: ($size / $base) * 1rem;
+}
+
+
+@mixin bp($breakpoint) {
+  @if $breakpoint=="small" {
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="medium" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

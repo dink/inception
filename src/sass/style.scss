@@ -1,0 +1,79 @@
+@import "../../bower_components/reset-css/_reset";
+@import "../../bower_components/susy/sass/susy";
+@import "settings/settings";
+@import "settings/fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  @include font-size(16);
+  background: $tone-color;
+  color: $text-color;
+  line-height: 1.5;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $brand-color;
+}
+
+.container {
+  @include container();
+  padding: 0 gutter();
+}
+
+.header {
+  background: $brand-color;
+  padding: 4em 0;
+  color: #ccc;
+  p {
+    color: $text-color-light;
+  }
+}
+
+.content {
+  margin: 2em 0;
+}
+
+h1 {
+  @include font-size(36);
+  color: #4ef99e;
+  background: none;
+  font-weight: $light;
+  span {
+    color: #eee;
+  }
+}
+
+h4 {
+  @include font-size(18);
+  font-weight: $light;
+  color: #aaa;
+  margin-top: .5em;
+  span {
+    color: #999;
+  }
+}
+
+p {
+  color: $text-color;
+  font-weight: $light;
+}
+
+
+// Browser-sync notification
+#__bs_notify__ {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  font-size: 0.95em !important;
+  padding: 5px 10px !important;
+  border-bottom-left-radius: 1px !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
